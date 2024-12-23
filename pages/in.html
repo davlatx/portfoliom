@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>   - Davlatbek_Developer</title>
+    <link rel="stylesheet" href="../CSS/index2.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" style="font-size: 27px; color: red;">Nicname: Davlatbek_Developer <br> Name: Davlatbek <br> Surname: Xasanov </div>
+            <ul class="nav-links">
+                <a  href="../index.html"><li >Home</li></a>
+                <a  href="in.html"><li >My info</li></a>
+                <a  href="lang.html"><li >Languages</li></a>
+                <a  href="kon.html"><li >Contact</li></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="con">
+        <div class="txt" style="border-radius: 50px; border-bottom-right-radius: 0; border-top-left-radius: 0;">
+            <h1>Men haqimda</h1>
+            <p>Mening ism familiyam Xasanov Davlatbek <br> telegram accauntim: @davlatx031 <br> my channels: https://t.me/Davlatbek_Developer and https://t.me/No_code_bepul_darslar <br> telefon raqamim esa +998 97 072 09 87 </p>
+        </div>
+        <div class="txt1" style="border-radius: 50px; border-top-right-radius: 0; border-bottom-left-radius: 0;">
+            <h1>Mening qiziqishlarim</h1>
+            <p>Men Pyton dasturlashni va No codeni bilaman, va ko'plab loyihalar qilganman</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowfall Animation</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-image: linear-gradient(blue,rgb(110, 110, 203));
+        }
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: #fff;
+            user-select: none;
+            z-index: 9999;
+            font-size: 1em;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-10px) translateX(0);
+            }
+            50% {
+                transform: translateY(50vh) translateX(10px);
+            }
+            100% {
+                transform: translateY(calc(100vh + 10px)) translateX(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const snowflakes = 300;
+        const snowflakeShapes = ['❄️', '✽', '✻', '❅', '❆'];
+        
+        for (let i = 0; i < snowflakes; i++) {
+            let snowflake = document.createElement('div');
+            snowflake.innerHTML = snowflakeShapes[Math.floor(Math.random() * snowflakeShapes.length)];
+            snowflake.className = 'snowflake';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = (Math.random() * 1 + 0.5) + 'em';
+            snowflake.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(snowflake);
+
+            snowflake.addEventListener('animationiteration', () => {
+                snowflake.innerHTML = snowflakeShapes[Math.floor(Math.random() * snowflakeShapes.length)];
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.opacity = Math.random();
+                snowflake.style.fontSize = (Math.random() * 1 + 0.5) + 'em';
+            });
+        }
+    </script>
+</body>
+</html>

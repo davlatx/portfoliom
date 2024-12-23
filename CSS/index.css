@@ -1,0 +1,276 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    
+    display: flex;
+    border-radius: 5px;
+    margin: 0% 2%;
+    height: 30px;
+    width: 100px;
+   
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    transition: background-color 0.3s ease; 
+}
+
+.nav-links li:hover {
+    background-color: #ff00005b;
+}
+
+.nav-links a {
+    padding: 0; 
+    text-decoration: none;
+    animation: tAnimation 3s infinite;
+    font-size: 1rem;
+    transition: color 1s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #00ff3c; 
+    animation: none; 
+}
+
+.hero {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 50px;
+    height: 85vh;
+}
+
+.hero-content {
+    height: 500px;
+    text-align: left;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: fadeIn 1s ease-out forwards, bAnimation 3s infinite;
+    max-width: 50%;
+    border-radius:50px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.hero-content h1 {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content .name {
+    color: #00ff3c;
+}
+
+.hero-content h2 {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero-content .profession {
+    color: #00ff3c;
+}
+
+.hero-content p {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.social-icons {
+    
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    background: transparent; 
+    color: #333; 
+    text-decoration: none;
+    border: 5px solid transparent;
+    animation: borderAnimation 3s infinite; 
+    animation: bAnimation 3s infinite;
+    transition: all 0.3s ease; 
+    
+}
+
+
+.social-icons a:hover   {
+    background-color: #363636; 
+    color: white; 
+    transform: scale(1.1); 
+    box-shadow: 0 6px 10px rgba(0, 255, 47, 0.15); 
+    
+}
+
+.social-icons svg {
+    width: 24px; 
+    height: 24px; 
+    fill: #3ea200;
+}
+
+.social-icons svg:hover{
+    fill: rgb(0, 255, 72);
+}
+.hire-btn {
+    margin-top: 36px;
+    margin-left: 22px;
+    background: #00ff3c;
+    animation: bgAnimation 3s infinite;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    
+}
+
+.hire-btn:hover {
+    transition: font-size 2s ease-in-out;
+}
+
+.hero-image {
+    margin-left: 150px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    display: inline-block;
+    width: 350px;  
+    height: 480px; 
+    border-radius: 50%;
+    border: 2px solid transparent;  
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeIn 1s ease-out forwards, bAnimation 3s infinite;
+    overflow: hidden; 
+}
+
+.hero-image img {
+    width: 100%; 
+    height: 100%;  
+    object-fit: cover;  
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #00ff3c; 
+    }
+    25% {
+        border-color: #ff5733; 
+    }
+    50% {
+        border-color: #ff9c33; 
+    }
+    75% {
+        border-color: #fff133; 
+    }
+    100% {
+        border-color: #00ff3c; 
+    }
+}
+
+@keyframes bgAnimation {
+    0% {
+        background-color: #00ff3c; 
+    }
+    25% {
+        background-color: #ff5733; 
+    }
+    50% {
+        background-color: #ff9c33; 
+    }
+    75% {
+        background-color: #fff133; 
+    }
+    100% {
+        background-color: #00ff3c; 
+    }
+}
+
+@keyframes tAnimation {
+    0% {
+        color: #00ff3c; 
+    }
+    25% {
+        color: #ff5733; 
+    }
+    50% {
+        color: #ff9c33; 
+    }
+    75% {
+        color: #fff133; 
+    }
+    100% {
+        color: #00ff3c; 
+    }
+}
+@keyframes bAnimation {
+    0% {
+         box-shadow: 0 10px 20px #00ff3c; 
+    }
+    25% {
+         box-shadow: 0 10px 20px #ff5733; 
+    }
+    50% {
+         box-shadow: 0 10px 20px #ff9c33; 
+    }
+    75% {
+         box-shadow: 0 10px 20px #fff133; 
+    }
+    100% {
+         box-shadow: 0 10px 20px #00ff3c; 
+    }
+}

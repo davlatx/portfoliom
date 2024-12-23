@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>   - Davlatbek_Developer</title>
+    <link rel="stylesheet" href="../CSS/index3.css">
+</head>
+<body>
+    <script src="JS/index.js"></script>
+    <header>
+        <nav class="navbar">
+            <div class="logo" style="font-size: 27px; color: red;">Nicname: Davlatbek_Developer <br> Name: Davlatbek <br> Surname: Xasanov </div>
+            <ul class="nav-links">
+                <a  href="../index.html"><li >Home</li></a>
+                <a  href="in.html"><li >My info</li></a>
+                <a  href="lang.html"><li >Languages</li></a>
+                <a  href="kon.html"><li >Contact</li></a>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="con">
+
+        <div class="row">
+            <div id="gauge1" class="gauge">
+                <svg version="1.1" baseProfile="full" width="190" height="190" xmlns="http://www.w3.org/2000/svg">
+                    <linearGradient id="gradient1" x1="0" x2="1" y1="0" y2="0">
+                        <stop offset="0%" stop-color="#00ff3c" />
+                        <stop offset="100%" stop-color="#ff5733" />
+                    </linearGradient>
+                    <path d="M5 95 A80 80 0 0 1 185 95" stroke="url(#gradient1)" fill="none" stroke-width="10" stroke-linecap="round" />
+                    
+                </svg>
+                <div class="center-circle">
+                    <span class="temperature">0</span>
+                </div>
+                <h2>Html</h2>
+            </div>
+            <div id="gauge2" class="gauge">
+                <svg version="1.1" baseProfile="full" width="190" height="190" xmlns="http://www.w3.org/2000/svg">
+                    <linearGradient id="gradient2" x1="0" x2="1" y1="0" y2="0">
+                        <stop offset="0%" stop-color="#00ff3c" />
+                        <stop offset="100%" stop-color="#ff5733" />
+                    </linearGradient>
+                    <path d="M5 95 A80 80 0 0 1 185 95" stroke="url(#gradient2)" fill="none" stroke-width="10" stroke-linecap="round" />
+                </svg>
+                <div class="center-circle">
+                    <span class="temperature">0</span>
+                </div>
+                <h2>Python</h2>
+            </div>
+            <div id="gauge3" class="gauge">
+                <svg version="1.1" baseProfile="full" width="190" height="190" xmlns="http://www.w3.org/2000/svg">
+                    <linearGradient id="gradient3" x1="0" x2="1" y1="0" y2="0">
+                        <stop offset="0%" stop-color="#00ff3c" />
+                        <stop offset="100%" stop-color="#ff5733" />
+                    </linearGradient>
+                    <path d="M5 95 A80 80 0 0 1 185 95" stroke="url(#gradient3)" fill="none" stroke-width="10" stroke-linecap="round" />
+                    
+                </svg>
+                <div class="center-circle">
+                    <span class="temperature">0</span>
+                </div>
+                <h2>C++</h2>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div id="gauge4" class="gauge">
+                <svg version="1.1" baseProfile="full" width="190" height="190" xmlns="http://www.w3.org/2000/svg">
+                    <linearGradient id="gradient4" x1="0" x2="1" y1="0" y2="0">
+                        <stop offset="0%" stop-color="#00ff3c" />
+                        <stop offset="100%" stop-color="#ff5733" />
+                    </linearGradient>
+                    <path d="M5 95 A80 80 0 0 1 185 95" stroke="url(#gradient4)" fill="none" stroke-width="10" stroke-linecap="round" />
+                    
+                </svg>
+                <div class="center-circle">
+                    <span class="temperature">0</span>
+                </div>
+                <h2>CSS</h2>
+
+            </div>
+            <div id="gauge5" class="gauge">
+                <svg version="1.1" baseProfile="full" width="190" height="190" xmlns="http://www.w3.org/2000/svg">
+                    <linearGradient id="gradient5" x1="0" x2="1" y1="0" y2="0">
+                        <stop offset="0%" stop-color="#00ff3c" />
+                        <stop offset="100%" stop-color="#ff5733" />
+                    </linearGradient>
+                    <path d="M5 95 A80 80 0 0 1 185 95" stroke="url(#gradient5)" fill="none" stroke-width="10" stroke-linecap="round" />
+                    
+                </svg>
+                <div class="center-circle">
+                    <span class="temperature">0</span>
+                </div>
+                <h2>JS</h2>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    
+    <script src="../JS/index.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowfall Animation</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-image: linear-gradient(blue,rgb(110, 110, 203));
+        }
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: #fff;
+            user-select: none;
+            z-index: 9999;
+            font-size: 1em;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-10px) translateX(0);
+            }
+            50% {
+                transform: translateY(50vh) translateX(10px);
+            }
+            100% {
+                transform: translateY(calc(100vh + 10px)) translateX(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const snowflakes = 300;
+        const snowflakeShapes = ['❄️', '✽', '✻', '❅', '❆'];
+        
+        for (let i = 0; i < snowflakes; i++) {
+            let snowflake = document.createElement('div');
+            snowflake.innerHTML = snowflakeShapes[Math.floor(Math.random() * snowflakeShapes.length)];
+            snowflake.className = 'snowflake';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = (Math.random() * 1 + 0.5) + 'em';
+            snowflake.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(snowflake);
+
+            snowflake.addEventListener('animationiteration', () => {
+                snowflake.innerHTML = snowflakeShapes[Math.floor(Math.random() * snowflakeShapes.length)];
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.opacity = Math.random();
+                snowflake.style.fontSize = (Math.random() * 1 + 0.5) + 'em';
+            });
+        }
+    </script>
+</body>
+</html>

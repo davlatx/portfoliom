@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    
+    display: flex;
+    border-radius: 5px;
+    margin: 0% 2%;
+    height: 30px;
+    width: 100px;
+   
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    transition: background-color 0.3s ease; 
+}
+
+.nav-links li:hover {
+    background-color: #ff00005b;
+}
+
+.nav-links a {
+    padding: 0; 
+    text-decoration: none;
+    animation: tAnimation 3s infinite;
+    font-size: 1rem;
+    transition: color 1s ease-in-out;
+}
+
+
+.nav-links a:hover {
+    color: #00ff3c; 
+    animation: none; 
+}
+
+
+  
+.speedometer {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin: 50px auto;
+    background: #ffffff;
+    border-radius: 150px 150px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #000000;
+}
+
+.needle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    height: 120px;
+    background: red;
+    transform-origin: bottom center;
+    transform: rotate(-90deg);
+    transition: transform 3s ease-in-out;
+}
+
+.labels {
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.con {
+   
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:100px;
+}
+
+.row {
+    
+    text-align: center;
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+}
+h2{
+    padding-top: 10%;
+}
+.gauge {
+    opacity: 0;
+    transform: translatey(-20px);
+    animation: fadeIn 1s ease-out forwards,bAnimation 3s infinite,tAnimation 3s infinite;
+    background-image: linear-gradient(-60deg,
+    rgb(189, 0, 0),
+    rgb(180, 93, 0),
+    rgb(161, 153, 0),
+    rgb(44, 156, 0));
+    position: relative;
+    width: 190px;
+    height: 190px;
+    border-radius: 180px;
+}
+
+.center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-image: linear-gradient(-90deg,
+    rgb(65, 194, 0),
+    rgb(217, 255, 0),
+    rgb(255, 157, 0));
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.temperature {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+
+@keyframes tAnimation {
+    0% {
+        color: #00ff3c;
+    }
+    25% {
+        color: #ff5733;
+    }
+    50% {
+        color: #ff9c33;
+    }
+    75% {
+        color: #fff133;
+    }
+    100% {
+        color: #00ff3c;
+    }
+}
+
+
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #00ff3c; 
+    }
+    25% {
+        border-color: #ff5733; 
+    }
+    50% {
+        border-color: #ff9c33; 
+    }
+    75% {
+        border-color: #fff133; 
+    }
+    100% {
+        border-color: #00ff3c; 
+    }
+}
+
+@keyframes bgAnimation {
+    0% {
+        background-color: #00ff3c; 
+    }
+    25% {
+        background-color: #ff5733; 
+    }
+    50% {
+        background-color: #ff9c33; 
+    }
+    75% {
+        background-color: #fff133; 
+    }
+    100% {
+        background-color: #00ff3c; 
+    }
+}
+
+
+@keyframes bAnimation {
+    0% {
+         box-shadow: 0 10px 20px #00ff3c; 
+    }
+    25% {
+         box-shadow: 0 10px 20px #ff5733; 
+    }
+    50% {
+         box-shadow: 0 10px 20px #ff9c33; 
+    }
+    75% {
+         box-shadow: 0 10px 20px #fff133; 
+    }
+    100% {
+         box-shadow: 0 10px 20px #00ff3c; 
+    }
+}
