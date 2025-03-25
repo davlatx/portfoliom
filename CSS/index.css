@@ -274,3 +274,52 @@ body {
          box-shadow: 0 10px 20px #00ff3c; 
     }
 }
+
+/* Asosiy uslublar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0078D7;
+  color: white;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav li {
+  margin: 0 10px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Kichik ekranlarga moslashish */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav li {
+    margin: 5px 0;
+  }
+}
